@@ -98,6 +98,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/fireworks.js') }}"></script>
+        <audio class="song" loops controls><source src="https://www.8notes.com/school/mp32/piano/happy_birthday.mp3"></audio>
+        <script>
+             var audio = $('.song')[0];
+             try{
+             navigator.vibrate(20);}
+             catch(Exception){
+                 console.log("Vibrate mode is not supported")
+             }
+             audio.play();
+        </script>
     </body>
 </html>
