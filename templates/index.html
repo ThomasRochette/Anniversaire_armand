@@ -46,7 +46,7 @@
                 <div class="row">
                   {% for image in images %}
                   <div class="col-md-6 col-lg-4 mb-5">
-                      <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#{{ image.split('.')[0] }}">
+                      <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#{{ image.split('.')[0].strip().strip("(").strip(")") }}">
                           <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                               <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                           </div>
@@ -93,7 +93,7 @@
         </div>
 
         {% for image in images %}
-        <div class="portfolio-modal modal fade" id="{{ image.split('.')[0] }}" tabindex="-1" role="dialog" aria-labelledby="{{ image.split('.')[0] }}Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="{{ image.split('.')[0].strip().strip("(").strip(")") }}" tabindex="-1" role="dialog" aria-labelledby="{{ image.split('.')[0].strip().strip("(").strip(")") }}Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
