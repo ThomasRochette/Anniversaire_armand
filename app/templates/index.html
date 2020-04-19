@@ -122,13 +122,15 @@
         <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
         <audio class="song" loops controls><source src="https://www.8notes.com/school/mp32/piano/happy_birthday.mp3"></audio>
         <script>
-             var audio = $('.song')[0];
-             try{
-             navigator.vibrate(20);}
-             catch(Exception){
-                 console.log("Vibrate mode is not supported")
-             }
-             audio.play();
+          $(document).ready( function() {
+            var audio = $('.song')[0];
+            try{
+              navigator.vibrate(20);}
+              catch(Exception){
+                console.log("Vibrate mode is not supported")
+              }
+              audio.play();
+            });
         </script>
         <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script><script>confetti.start()</script>
     </body>
