@@ -12,14 +12,14 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/css/styles.css" rel="stylesheet" />
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="https://192.168.1.100:5001/?launchApp=SYNO.Photo.AppInstance&SynoToken=FPleargI4VThA#/my_library/person/10/item/item/832?_k=mh2kmg" alt="" /><!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="{{ url_for('static', filename='assets/img/avatar.png') }}" alt="" /><!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Bon anniversair ARMAND !!!</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -27,7 +27,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+                <p class="masthead-subheading font-weight-light mb-0">25 ans, le quart de siècle ça se fête !</p>
             </div>
         </header>
         <!-- Portfolio Section-->
